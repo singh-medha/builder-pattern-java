@@ -1,3 +1,4 @@
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 void main() {
@@ -11,6 +12,19 @@ void main() {
             .carbohydrate(27)
             .build();
 
-    IO.println("Calories in coca cola is " +cocaCola.getCalories());
+    IO.println(String.format("Calories in coca cola is %1$d.", cocaCola.getCalories()));
 
+    DominosPizza pizza = new DominosPizza.Builder(DominosPizza.Size.REGULAR)
+            .addTopping(Pizza.Topping.SAUSAGE)
+            .addTopping(Pizza.Topping.ONION)
+            .build();
+
+    IO.println("Dominos pizza ordered!");
+
+    PizzaHutPizza pizzaHutPizza = new PizzaHutPizza.Builder()
+            .addTopping(Pizza.Topping.HAM)
+            .sauceInside()
+            .build();
+
+    IO.println("Pizza hut pizza ordered!");
 }
